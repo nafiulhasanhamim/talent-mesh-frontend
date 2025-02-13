@@ -281,8 +281,8 @@ export class SidebarComponent implements AfterViewInit {
   }
 
   updateSidebar(width: number) {
-    this.isOpen = width >= 1366;
-    this.showToggleButton = width < 1366;
+    this.isOpen = width >= 1000; // Sidebar always open for large screens
+    this.showToggleButton = width <= 1000; // Show toggle button when width <= 1366px
   }
 
   toggleSidebar() {
