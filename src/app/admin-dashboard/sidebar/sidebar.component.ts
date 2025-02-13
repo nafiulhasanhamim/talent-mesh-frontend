@@ -262,46 +262,7 @@ import { LogoutModalComponent } from '../logout-modal/logout-modal.component';
     `,
   ],
 })
-// export class SidebarComponent {
-//   unreadNotificationsCount = 5;
 
-//   isOpen = window.innerWidth >= 1360; // Sidebar open by default for large screens
-//   showToggleButton = window.innerWidth <= 1360; // Show toggle button when screen is <= 1366px
-
-//   constructor(private dialog: MatDialog) {}
-
-//   @HostListener('window:resize', ['$event'])
-//   onResize(event: any) {
-//     const width = event.target.innerWidth;
-//     this.isOpen = width >= 1000; // Sidebar always open for large screens
-//     this.showToggleButton = width <= 1000; // Show toggle button when width <= 1366px
-//   }
-
-//   toggleSidebar() {
-//     if (window.innerWidth < 1360) {
-//       this.isOpen = !this.isOpen;
-//     }
-//   }
-
-//   closeSidebarOnMobile() {
-//     if (window.innerWidth < 1360) {
-//       this.isOpen = false;
-//     }
-//   }
-
-//   openLogoutModal() {
-//     const dialogRef = this.dialog.open(LogoutModalComponent, {
-//       width: '300px',
-//     });
-
-//     dialogRef.afterClosed().subscribe((result) => {
-//       if (result) {
-//         // Perform logout action here
-//         console.log('User confirmed logout');
-//       }
-//     });
-//   }
-// }
 export class SidebarComponent implements AfterViewInit {
   unreadNotificationsCount = 5;
   isOpen = false;
